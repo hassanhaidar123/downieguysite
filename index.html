@@ -6,101 +6,124 @@
 	
    <style>
 
-
-
-	   
     @font-face {
             font-family: 'Comic Sans MS';
             src: url('fonts/comicsansms.ttf') format('truetype');
             font-weight: normal;
             font-style: normal;
         }
-	   
-        /* Set the image width to 300px */
+	    
+        /* Set the image width to 200px */
         img {
             width: 200px;  /* Adjust the width as per your requirement */
             height: auto;  /* Maintain aspect ratio */
-		float: left; /* This moves the image to the left side */
-		margin-right: 30px; /* Adds space between the image and the text */
+            margin-right: 30px; /* Adds space between the image and the text */
             margin-top: 20px; /* Adds space above the image */
         }
+
      body {
-  font-family: system-ui;
-  background: #f06d06;
-  color: white;
-  text-align: center;
-}
-      h1 {
-		font-size: 100px;
-            margin-top: 0px; /* Adjust this value to move the h1 up */
-         text-shadow: 5px 5px 5px black, -1px -2px 5px rgba(255, 255, 255, 0.7);
-        }
+         font-family: system-ui;
+         background: #f06d06;
+         color: white;
+         text-align: center;
+         display: flex;
+         flex-direction: column;
+         align-items: center;
+         padding-top: 50px; /* Adds space from the top of the page */
+     }
+
+     /* Create a wrapper for the image and content */
+     .content-wrapper {
+         display: flex;
+         align-items: flex-start; /* Aligns the items to the top */
+         justify-content: center; /* Centers the content horizontally */
+         max-width: 1000px;
+         width: 100%;
+     }
+
+     h1 {
+          font-size: 100px;
+          text-shadow: 5px 5px 5px black, -1px -2px 5px rgba(255, 255, 255, 0.7);
+      }
+
      p {
-    font-family: 'Comic Sans MS', 'Comic Sans', sans-serif;
+        font-family: 'Comic Sans MS', 'Comic Sans', sans-serif;
         font-weight: bold;
-    font-size: 32px;
-     margin-top: 0px; /* Reduce negative margin to avoid overlap */
-            margin-bottom: 0px; /* Create space between paragraphs */
+        font-size: 32px;
+        margin-top: 0px;
+        margin-bottom: 0px;
         text-shadow: 
                 2px 2px 0px black, 
                -2px -2px 0px black,  
                 2px -2px 0px black, 
-               -2px 2px 0px black; /* Creates a simple outline effect */
-margin: 15px auto; /* Set margins to reduce space outside the text container */
-            padding: 10px 1px; /* Add padding inside the <p> element to make the text box smaller */
-            width: 80%; /* Control the width of the text container */
-            max-width: 800px; /* Optional: sets a maximum width for the container */
-            box-sizing: border-box; 
-  position: relative;  /* Enables positioning */
-    top: -50px;  /* Moves the element up */
-}
-.social-icons img {
-    width: 70px;  /* Adjust the width to change the size */
-    height: auto; /* Maintains aspect ratio */
-}
-.social-icons a {
-    margin: 0 10px;  /* Adjust the horizontal space between icons */
- position: relative;  /* Enables positioning */
-    top: -20px;  /* Moves the element up */
- text-decoration: none; /* Remove underline from links */
-            outline: none; /* Remove the outline (blue dot) around the icons */
-}
-    </style>
+               -2px 2px 0px black; 
+        margin: 15px auto; 
+        padding: 10px 1px;
+        width: 80%; 
+        max-width: 800px; 
+        box-sizing: border-box; 
+        position: relative;
+        top: -50px;  
+    }
+
+    /* Adjust the layout for the Twitch iframe */
+    iframe {
+        margin-top: 50px;  /* Adds space above the Twitch embed */
+        margin-bottom: 50px; /* Adds space below the Twitch embed */
+    }
+
+    .social-icons img {
+        width: 70px;  
+        height: auto; 
+    }
+
+    .social-icons a {
+        margin: 0 10px;  
+        position: relative;  
+        top: -20px;  
+        text-decoration: none; 
+        outline: none; 
+    }
+
+   </style>
 </head>
 <body>
   
-    <img src="https://i.imgur.com/OFAaJFn.png"/>
-  
-    <h1>$DGUY</h1>
-
- 
-     <iframe 
-    src="https://player.twitch.tv/?channel=downieguy&parent=downieguysite.pages.dev" 
-    frameborder="0" 
-    allowfullscreen="true" 
-    scrolling="no" 
-    height="378" 
-    width="620">
-</iframe>
-
-	
-    <p>My name is Chris and i am downieguy and i have make a memecoin. 👨‍🦽</p>
-
-    <p>My syndrome might be down, but our money is going up. 📈</p>
-
-    <p>Invest into the syndrome and go downiemode frfr. </p>
-
- <div class="social-icons">
-<a href="https://pump.fun" target="_blank">
-            <img src="https://framerusercontent.com/images/zPArbKbqsGceYjy90nnAL2mJgkA.webp" alt="Pump.fun">
-        </a>
-        <a href="https://t.me/+DuEX5oB534k2M2Rk" target="_blank">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/82/Telegram_logo.svg/2048px-Telegram_logo.svg.png" alt="Telegram">
-        </a>
-        <a href="https://x.com/downieguy" target="_blank">
-            <img src="https://freepnglogo.com/images/all_img/1691832581twitter-x-icon-png.png" alt="X (Twitter)">
-        </a>
+    <!-- Image moved to the left and content is wrapped -->
+    <div class="content-wrapper">
+        <img src="https://i.imgur.com/OFAaJFn.png"/>
         
+        <div class="content">
+            <h1>$DGUY</h1>
+
+            <!-- Updated Twitch Embed with Correct Parent Domain -->
+            <iframe 
+                src="https://player.twitch.tv/?channel=downieguy&parent=downieguysite.pages.dev" 
+                frameborder="0" 
+                allowfullscreen="true" 
+                scrolling="no" 
+                height="378" 
+                width="620">
+            </iframe>
+
+            <p>My name is Chris and I am downieguy and I have made a memecoin. 👨‍🦽</p>
+
+            <p>My syndrome might be down, but our money is going up. 📈</p>
+
+            <p>Invest into the syndrome and go downiemode frfr. </p>
+
+            <div class="social-icons">
+                <a href="https://pump.fun" target="_blank">
+                    <img src="https://framerusercontent.com/images/zPArbKbqsGceYjy90nnAL2mJgkA.webp" alt="Pump.fun">
+                </a>
+                <a href="https://t.me/+DuEX5oB534k2M2Rk" target="_blank">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/82/Telegram_logo.svg/2048px-Telegram_logo.svg.png" alt="Telegram">
+                </a>
+                <a href="https://x.com/downieguy" target="_blank">
+                    <img src="https://freepnglogo.com/images/all_img/1691832581twitter-x-icon-png.png" alt="X (Twitter)">
+                </a>
+            </div>
+        </div>
     </div>
 
 </body>
